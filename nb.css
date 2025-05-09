@@ -1,0 +1,148 @@
+/* 重置默认边距 */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 全屏高度 */
+    display: flex;
+    overflow: hidden; /* 隐藏全局滚动条 */
+}
+
+/* 侧边栏样式优化 */
+
+.sidebar {
+    width: 320px;  /* 扩大宽度保证按钮完整显示 */
+    height: 100vh;
+
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    background: #ffffff; /* 保持白色背景 */
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* 纵向排列子元素 */
+    gap: 15px; /* 元素间间距 */
+}
+
+/* 确保按钮容器始终在侧边栏内 */
+.button-group {
+    margin-top: auto; /* 将按钮组固定在底部 */
+    padding: 15px 0;
+    border-top: 1px solid #e2e8f0; /* 增加分割线 */
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+
+/* 地图容器调整 */
+#map {
+    flex: 1; /* 占据剩余空间 */
+    margin-top: 30px;
+    height: 100vh;
+    min-width: 600px;
+    background: #e9ecef;
+    transition: margin-left 0.3s;
+}
+
+
+/* 表单元素紧凑布局 */
+.section_card {
+    margin-bottom: 10px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.section {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tag-group {
+    display: grid;
+    gap: 8px; /* 元素间距 */
+}
+
+.tag-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+}
+
+/* 按钮样式增强 */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn.primary {
+    background: #3b82f6;
+    color: white;
+    border: 1px solid #2563eb;
+}
+
+.btn.primary:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+}
+
+/* 输入框优化 */
+.input-field {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* 下拉菜单样式 */
+select.tag-select,
+select.env-select {
+    width: 120px;
+    padding: 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background: white;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin: 12px 0 8px;
+}
+
+/* 响应式调整 */
+
+
+/* 确保地图控件在顶层 */
+.leaflet-control {
+    z-index: 999 !important; 
+}
+
+@media (max-width: 1400px) {
+    .sidebar {
+        width: 280px;
+    }
+    #map {
+        margin-left: 280px;
+    }
+}

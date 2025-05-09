@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Route Planner</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/nb.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1><i class="fas fa-route"></i> Travel Planner</h1>
+        
+        <!-- 用户历史部分 -->
+        <div class="section_card">
+            <input type="text" id="name" placeholder="Input User Name" class="input-field">
+            <button onclick="loadUserHistory()" class="btn primary">
+                <i class="fas fa-history"></i>Load User History
+            </button>
+        </div>
+
+        <!-- 标签选择表单 -->
+        <form id="tagForm" class="card">
+            <!-- 餐厅标签 -->
+            <div class="section">
+                <div class="tag-group">
+
+                    <!-- 每个标签项改为下拉框 -->
+                    <!-- restaurant -->
+                    <h3>Restaurant</h3>
+                    <div class="tag-item">
+                        <span>Street Food</span>
+                        <select class="tag-select" data-category="Restaurant" data-value="Street Food">
+                            <option value="default">-</option>
+                            <option value="like">Like</option>
+                            <option value="dislike">Dislike</option>
+                        </select>
+                    </div>
+                    
+                    <div class="tag-item">
+                        <span>Dinner</span>
+                        <select class="tag-select" data-category="Restaurant" data-value="Dinner">
+                            <option value="default">-</option>
+                            <option value="like">Like</option>
+                            <option value="dislike">Dislike</option>
+                        </select>
+                    </div>
+                    <!-- attraction -->
+                    <h3>Attraction</h3>
+                    <div class="tag-item">
+                        <span>Amusement Facility</span>
+                        <select class="tag-select" data-category="Attraction" data-value="Amusement Facilities">
+                            <option value="default">-</option>
+                            <option value="like">Like</option>
+                            <option value="dislike">Dislike</option>
+                        </select>
+                    </div>
+
+                    <div class="tag-item"><span>Beach</span><select class="tag-select" data-category="Attraction" data-value="Beach"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Campus</span><select class="tag-select" data-category="Attraction" data-value="Campus"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Exhibition Hall</span><select class="tag-select" data-category="Attraction" data-value="Exhibition Hall"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Heritage Site</span><select class="tag-select" data-category="Attraction" data-value="Heritage Sites"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Mountain</span><select class="tag-select" data-category="Attraction" data-value="Mountain"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Museum</span><select class="tag-select" data-category="Attraction" data-value="Museum"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Park</span><select class="tag-select" data-category="Attraction" data-value="Park"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+                    <div class="tag-item"><span>Theme Park</span><select class="tag-select" data-category="Attraction" data-value="Theme Park"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+
+                    <!-- shopping -->
+                    <h3>Shopping</h3>
+                    <div class="tag-item"><span>Shopping Mall</span><select class="tag-select" data-category="Shopping" data-value="Shopping Mall"><option value="default">-</option><option value="like">Like</option><option value="dislike">Dislike</option></select></div>
+
+                    <!-- reserve & environment -->
+                    <h3>Others</h3>
+                    <div class="section">
+                        <span>Reserve</span>
+                        <div class="tag-group">
+                            <select class="env-select" name="reserve">
+                                <option value="default">-</option>
+                                <option value="Yes">Need To Reserve</option>
+                                <option value="No">No need To Reserve</option>
+                            </select>
+                        </div>
+
+                        <span>Environment</span>
+                        <div class="tag-group">
+                            <select class="env-select" name="environment">
+                                <option value="default">-</option>
+                                <option value="Outdoor">Outdoor</option>
+                                <option value="Indoor">Indoor</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="submitTagsBtn" class="btn primary">
+                        <i class="fas fa-cloud-upload-alt"></i> Submit Tags
+                    </button>
+                    <button type="button" id="generateBtn" class="btn success">
+                        <i class="fas fa-layer-group"></i> Load Route
+                    </button>
+                </div>
+
+            </div>
+            
+            
+            <!-- <div class="button-group">
+                <button type="button" id="generateBtn" class="btn success">
+                    <i class="fas fa-directions"></i> Generate Router
+                </button>
+                <button type="button" onclick="useLastTags()" class="btn info" id="useLastBtn" disabled>
+                    <i class="fas fa-redo"></i> Use Last Choices
+                </button>
+            </div> -->
+
+            <!-- 原按钮修改 -->
+            
+
+        </form>
+            
+        <!-- 结果展示 -->
+        <div id="results" class="card"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 确保DOM加载后绑定事件
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('generateBtn').addEventListener('click', submitTags);
+        });
+    </script>
+        
+</body>
+</html>
