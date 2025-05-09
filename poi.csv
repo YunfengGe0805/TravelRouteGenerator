@@ -1,0 +1,35 @@
+ID,Name,Lon,Lat,Category,Others,Reserve,Environment,Rating,Time
+1,Victoria Peak,114.145532799999998,22.275886600000000,Attraction,Mountain,No,Outdoor,4.6,180
+2,Dragon¡¯s Back,114.243311000000006,22.236968550000000,Attraction,Mountain,Yes,Outdoor,4.6,180
+3,Repulse Bay,114.196312800000001,22.236703980000001,Attraction,Beach,No,Outdoor,4.4,120
+4,Shek O,114.250493899999995,22.230088250000001,Attraction,Beach,No,Outdoor,4.3,120
+5,Golden Bauhinia Square,114.173962599999996,22.284635600000001,Attraction,Heritage Sites,No,Outdoor,4.1,15
+6,Rock Carvings at Wong Chuk Hang,114.174996600000000,22.252432960000000,Attraction,Heritage Sites,No,Outdoor,3.9,30
+7,Hong Kong Museum of The War of Resistance and Coastal Defence,114.235654999999994,22.281869960000002,Attraction,Museum,Yes,Indoor,4.3,30
+8,The University of Hong Kong,114.136572799999996,22.283079149999999,Attraction,Campus,Yes,Indoor,4.3,30
+9,Ocean Park,114.175713200000004,22.246660680000002,Attraction,Theme Park,Yes,Outdoor,4.3,240
+10,Hong Kong Convention and Exhibition Center,114.173041900000001,22.283375379999999,Attraction,Exhibition Hall,No,Indoor,4.2,20
+11,Victoria Park,114.188643299999995,22.282376339999999,Attraction,Park,No,Outdoor,4.2,20
+12,East Coast Park Precinct,114.189467399999998,22.288212819999998,Attraction,Park,No,Outdoor,4.2,20
+13,Central-Mid-Levels Escalators,114.154951100000005,22.283851219999999,Attraction,Amusement Facilities,No,Outdoor,4.1,30
+14,Hong Kong Observation Wheel,114.161725700000005,22.285277239999999,Attraction,Amusement Facilities,No,Outdoor,4.3,60
+15,Western Market,114.150365699999995,22.287309740000001,Shopping,Shopping Mall,No,Indoor,3.6,120
+16,The Landmark,114.157833499999995,22.281121740000000,Shopping,Shopping Mall,No,Indoor,4.2,120
+17,Times Square,114.182089300000001,22.278230210000000,Shopping,Shopping Mall,No,Indoor,4.1,120
+18,Taikoo Shing Cityplaza,114.217346800000001,22.286764940000001,Shopping,Shopping Mall,No,Indoor,4.1,120
+19,Pacific Place,114.165392600000004,22.277735920000001,Shopping,Shopping Mall,No,Indoor,4.2,120
+20,International Finance Center Mall,114.158382300000000,22.285560380000000,Shopping,Shopping Mall,No,Indoor,4.2,120
+21,Hysan Place,114.183822800000002,22.279778980000000,Shopping,Shopping Mall,No,Indoor,4.1,120
+22,The Pulse,114.197995399999996,22.235972409999999,Shopping,Shopping Mall,No,Indoor,4,120
+23,Harbour North Phase 1,114.199320799999995,22.292766610000001,Shopping,Shopping Mall,No,Indoor,3.8,120
+24,Cyberport,114.129990000000006,22.260908879999999,Shopping,Shopping Mall,No,Indoor,3.6,120
+25,Baan Thai Restaurant,114.185665799999995,22.280792739999999,Restaurant,Dinner,No,Indoor,4.6,30
+26,Tong Kee Bao Dim,114.136018800000002,22.286713870000000,Restaurant,Street Food,No,Outdoor,2,5
+27,Pirata,114.176117800000000,22.278133499999999,Restaurant,Dinner,Yes,Indoor,4.3,60
+28,Lung King Heen,114.157225600000004,22.287061909999998,Restaurant,Dinner,Yes,Indoor,4.5,60
+29,Camper¡¯s,114.211075100000002,22.286703350000000,Restaurant,Dinner,No,Indoor,4.3,30
+30,Grill Room,114.178691000000001,22.244792629999999,Restaurant,Dinner,No,Indoor,5,60
+31,COMEBUY,114.200886800000006,22.292954630000001,Restaurant,Street Food,No,Indoor,4,10
+32,McDonald¡¯s,114.209579500000004,22.219376919999998,Restaurant,Street Food,No,Indoor,3.8,20
+33,Paramount Banquet Hall,114.153512399999997,22.248665740000000,Restaurant,Dinner,Yes,Indoor,3.3,60
+34,Ho Kee Dessert,114.156097900000006,22.248351820000000,Restaurant,Street Food,No,Indoor,4.6,20
